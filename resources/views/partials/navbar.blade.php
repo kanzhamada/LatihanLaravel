@@ -10,10 +10,10 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item {{($title === "Saya") ? 'active' : ''}}">
-          <a class="nav-link" href="inisaya">Saya</a>
+          <a class="nav-link" href="/inisaya">Saya</a>
         </li>
         <li class="nav-item {{($title === "Test") ? 'active' : ''}}">
-          <a class="nav-link" href="test">Test</a>
+          <a class="nav-link" href="/test">Test</a>
         </li>
       </ul>
     </div>
