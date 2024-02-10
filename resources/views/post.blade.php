@@ -5,7 +5,7 @@
     <article class="mb-5">
         <h2>{{ $post["title"] }}</h2>
         <h5 style="color: gray">By: {{ $post["author"] }}</h5>
-        <p>{{ $post["content"] }}</p>
+        <p>{{ $post["body"] }}</p>
 
         <p>
             
