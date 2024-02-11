@@ -36,4 +36,4 @@ Route::get('/', function () {
 });
 
 Route::get(
-    '/test/{slug}', [PostController::class, 'show']);
+    '/test/{post:slug}', [PostController::class, 'show']);

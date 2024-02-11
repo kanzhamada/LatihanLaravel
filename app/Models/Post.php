@@ -10,7 +10,7 @@ class Post extends Model
     use HasFactory;
 
     //Boleh diisi
-    protected $fillable = ['title', 'excerpt', 'body'];
+    protected $fillable = ['title', 'slug', 'author', 'excerpt', 'body'];
     /* Format
     'title' => '',
     'excerpt' => '',
