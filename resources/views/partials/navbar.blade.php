@@ -6,16 +6,38 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item {{($title === "Home") ? 'active' : ''}}">
+        <li class="nav-item {{($active === "home") ? 'active' : ''}}">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item {{($title === "Saya") ? 'active' : ''}}">
+        <li class="nav-item {{($active === "saya") ? 'active' : ''}}">
           <a class="nav-link" href="/inisaya">Saya</a>
         </li>
-        <li class="nav-item {{($title === "Test") ? 'active' : ''}}">
+        <li class="nav-item {{($active === "test") ? 'active' : ''}}">
           <a class="nav-link" href="/test">Test</a>
         </li>
+        <li class="nav-item {{($active === "categories") ? 'active' : ''}}">
+          <a class="nav-link" href="/categories">Category</a>
+        </li>
+        <li>
+          <form class="form-inline" action="/test">
+            @if(request('category'))
+              <input type="hidden" name="category" value="{{ request('category') }}">
+            @endif
+            @if(request('author'))
+              <input type="hidden" name="author" value="{{ request('author') }}">
+            @endif
+            <div class="input-group">
+              <div class="input-group-prepend">
+                
+                <button class="btn btn-dark" type="submit">Search</button>
+                
+              </div>
+              <input type="text" class="form-control" placeholder="..." name="search" value="{{ request('search') }}">
+            </div>
+          </form>
+        </li>
       </ul>
+      
     </div>
     </div>
   </nav>

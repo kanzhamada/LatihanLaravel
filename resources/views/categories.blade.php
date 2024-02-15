@@ -12,7 +12,7 @@
     <ul>
     @foreach ($category as $categories)
         <li>
-        <h3><a href="/categories/{{ $categories["slug"] }}">{{ $categories["name"] }}</a></h3>
+        <h3><a href="../test?category={{ $categories["slug"] }}">{{ $categories["name"] }}</a></h3>
        
         </li>
     @endforeach

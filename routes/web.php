@@ -27,32 +27,36 @@ Route::get('/inisaya', function () {
         "name" => "Kanz Abdillah Hamada",
         "nim" => "2602170202",
         "semester" => 4,
-        "image" => "xfb.jpg"
+        "image" => "xfb.jpg",
+        "active" => "saya"
     ]);
 });
 
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "active" => "home"
     ]);
 });
 
 Route::get('/test/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories/{category:slug}', function(Category $category){
-    return view('category', [
-        'title' => $category->name,
-        'posts' => $category->posts,
-        'category' => $category->name
+    return view('test', [
+        'title' => "Category: $category->name",
+        'posts' => $category->posts->load('category', 'author'),
+        'category' => $category->name,
+        'active' => 'categories'
     ]);
 });
 
 Route::get('/categories/', [CategoryController::class, 'index']);
 
 Route::get('/author/{author:username}', function(User $author){
-    return view('author', [
-        'title' => $author->name,
-        'posts' => $author->posts,
+    return view('test', [
+        'title' => "Posts by: $author->name",
+        'posts' => $author->posts->load('category', 'author'),
+        'active' => 'test'
     ]);
 });
