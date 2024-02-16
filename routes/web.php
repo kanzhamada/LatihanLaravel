@@ -21,6 +21,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/test', [PostController::class, 'index']);
 
+
 Route::get('/inisaya', function () {
     return view('inisaya', [
         "title" => "Saya",

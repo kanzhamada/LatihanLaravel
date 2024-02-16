@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'food'
         ]);
 
-        Post::factory(21)->create();
+        Post::factory(50)->create();
         // Post::create([
         //     'title' => 'Judul Post Pertama',
         //     'slug' => 'judul-post-pertama',

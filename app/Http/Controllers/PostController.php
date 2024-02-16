@@ -19,10 +19,14 @@ class PostController extends Controller
             $title = ' oleh ' . $author->name;
         }
 
+        // $postsPerPage = request()->page == 1 || request()->input('test') == 'test' ? 7 : 9;
+        // $limit = request()->page == 1 ? 7 : 9;
+
         return view('test', [
             "title" => "Berita Terkini" . $title,
             // "posts" => Post::all()
-            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->get(),
+            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(7)->withQueryString(),
+            "otherPost" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(9)->withQueryString(),
             "active" => "test"
         ]);
     }
