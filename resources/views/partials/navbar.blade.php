@@ -37,6 +37,12 @@
           </form>
         </li>
       </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item {{($active === "login") ? 'active' : ''}}">
+          <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        </li>
+      </ul>
       
     </div>
     </div>

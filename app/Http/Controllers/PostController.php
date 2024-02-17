@@ -26,7 +26,7 @@ class PostController extends Controller
             "title" => "Berita Terkini" . $title,
             // "posts" => Post::all()
             "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(7)->withQueryString(),
-            "otherPost" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(9)->withQueryString(),
+            // "otherPost" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(9)->withQueryString(),
             "active" => "test"
         ]);
     }

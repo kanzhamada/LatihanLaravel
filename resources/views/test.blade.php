@@ -86,7 +86,7 @@
 @endif
 
 <div class="d-flex justify-content-center">
-    {{ $otherPost->links() }}
+    {{ $posts->links() }}
 </div>
 
 @endsection

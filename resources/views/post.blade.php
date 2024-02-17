@@ -6,6 +6,8 @@
 
 @section('container')
 
+<img class="card-img rounded-lg" src="https://source.unsplash.com/1200x690?programming" alt="{{ $post["title"] }}">
+
     <article class="mt-4">
         <h2 class="mb-4" style="border-bottom: 1px solid gray; padding-bottom: 20px">{{ $post["title"] }}</h2>
         
