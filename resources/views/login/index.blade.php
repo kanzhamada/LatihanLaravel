@@ -28,7 +28,7 @@
       <small class="d-block text-center mt-3">
         Don't have an account? <a href="/register">Register</a>
      </small>
-      <p class="mt-3 mb-3 text-body-secondary">&copy; 2024</p>
+      <p class="mt-3 mb-3 text-body-secondary text-center">&copy; 2024</p>
     </form>
 
     

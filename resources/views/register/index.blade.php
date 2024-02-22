@@ -10,39 +10,40 @@
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
   
       <div class="form-floating">
-        <label for="floatingInput">Email address</label>
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
         
       </div>
       <p></p>
 
       <div class="form-floating">
-        <label for="floatingInput">Name</label>
-        <input type="name" class="form-control" id="floatingInput" placeholder="Your Name">
+        <label for="name">Name</label>
+        <input type="name" class="form-control" id="name" name="name" placeholder="Your Name">
         
       </div>
       <p></p>
 
       <div class="form-floating">
-        <label for="floatingInput">Username</label>
-        <input type="username" class="form-control" id="floatingInput" placeholder="username">
+        <label for="username">Username</label>
+        <input type="username" class="form-control" id="username" name="username" placeholder="username">
         
       </div>
       <p></p>
 
       <div class="form-floating">
-        <label for="floatingPassword">Password</label>
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="passowrd">Password</label>
+        <input type="password" class="form-control" id="passowrd" name="password" placeholder="Password">
         
       </div>
   
       
       <button class="mt-3 btn btn-primary w-100 py-2" type="submit">Sign in</button>
 
+
       <small class="d-block text-center mt-3">
         Have an account? <a href="/login">Login</a>
      </small>
-      <p class="mt-3 mb-3 text-body-secondary">&copy; 2024</p>
+      <p class="mt-3 mb-3 text-body-secondary text-center">&copy; 2024</p>
     </form>
 
     
